@@ -1,0 +1,47 @@
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12">
+            <p class="text-muted mb-5">{{"Home / Shop" | translate}} </p>
+            <h2 class="font-weight-bold">{{product?.name}} </h2>
+            <div class="d-flex">
+                    <app-rating></app-rating>
+                <p class="para text-muted"> ( 2 customer reviews )</p>
+            </div>
+             
+            <h3 class="my-3"> {{product?.discount ? product?.discountedPrice : product?.price}} {{"LE" | translate}} </h3>
+            <p class="text-muted my-4">
+                    {{product?.description}}
+                         </p>
+            <p class="text-muted">
+                    {{product?.description}}
+            </p>
+            <button class="w-100 btn btn-dark text-light my-3" (click)="addToCart()"> {{"add_to_cart" | translate}}</button>
+            <div class="d-flex justify-content-between">
+
+                <div class="d-flex">
+                    <fa-icon [icon]="faHeart" class="mr-2"></fa-icon>
+                    <h6 class="font-weight-bold">{{"add_to_wishlist" | translate }}</h6>
+                </div>
+                <div class="d-flex">
+                    <h6 class="mr-3 font-weight-bold">{{"share" | translate }} </h6>
+                    <fa-icon [icon]="faFacebook" class="mr-3"></fa-icon>
+                    <fa-icon [icon]="faTwitter" class="mr-3"></fa-icon>
+                    <fa-icon [icon]="faInstagram" class="mr-3"></fa-icon>
+                </div>
+            </div>    
+                <div class="my-2">
+                    <app-product-tabs></app-product-tabs>
+                </div>
+                <div class="d-flex mt-5">
+                    <p class="text-muted mr-1" > {{"Categories:" | translate }}</p>
+                   <a href="" class="mr-2"> {{"Accessories" | translate }}</a>
+                   <a href="" class="mr-2"> {{"Gifts" | translate }}</a>
+                   <a href="" class="mr-2"> {{"Shose" | translate }}</a>
+                   <a href="" class="mr-2"> {{"Women" | translate }}</a>
+
+                </div>
+           
+        </div>
+       
+    </div>
+</div>

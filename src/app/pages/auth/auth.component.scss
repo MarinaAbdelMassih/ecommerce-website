@@ -1,0 +1,83 @@
+
+.contform
+{
+    background-color: rgba(0,0,0,0.55);
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:555555;
+    display:none;
+    
+}
+
+.field-icon {
+  position: absolute;
+  right: 1rem;
+  bottom: 50%;
+  transform: translateY(50%);
+  z-index: 5;
+}
+
+.input-group-text{
+  background-color: transparent;
+  border:none !important;
+}
+fa-icon {
+  color: darkgray;
+}
+.padd2 { padding : 1.3rem 3rem ;}
+  #close
+  {
+    cursor: pointer;
+    font-size: 1.7rem;
+    color: black;
+    position: absolute;
+    top:0rem;
+    right: 0rem;
+    
+  }
+/*end sign up */
+/*new sign in*/
+
+::placeholder {
+  color: rgb(220, 220, 220);
+  font-size: 1rem;
+}
+.padd{
+  padding :6rem 3rem 0rem;
+}
+
+a {
+  text-decoration: underline;
+  cursor:pointer;
+}
+.colorlink {color:rgb( 255, 58 , 30); }
+button {
+  background-color: rgb(255, 198 , 40);
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  height: 3rem;
+  line-height: 100%;
+  padding: 0.5rem 4rem;
+}
+
+
+
+
+
+
+
+
+
+button{color:#fff; 
+    background-color: black; 
+    border:1px solid transparent;
+    border-radius: 6px;
+}
+button:hover{background-color:burlywood}
+.colorLink{color:burlywood;
+text-decoration: underline;}
+
+

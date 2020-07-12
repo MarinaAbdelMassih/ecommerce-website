@@ -1,0 +1,25 @@
+<div class="container my-5">
+        <div class="row">
+            <div class="col-md-6 text-center m-auto" >
+                    <a routerLink="/products/{{categories[0].slug}}">
+              <img [src]="categories[0].images" class="img-fluid" > </a>
+              <h6 class="py-3 font-weight-bold">{{categories[0].name}} <span class="text-muted"> 50 </span></h6>
+            
+            </div>
+            <div class="col-md-6" >
+                    <a routerLink="/products/{{categories[0].slug}}">
+              <img [src]="categories[1].images" class="img-fluid" > </a>
+              <h6 class="py-3 font-weight-bold">{{categories[1].name}} <span class="text-muted"> 50 </span></h6>
+            
+            </div>
+
+          <!--  <div class="col-6"  | slice:0:2 " *ngFor="let category of categories ;">
+                <img [src]="category.images[1]" class="w-100">
+                <h6 class="py-3 font-weight-bold">Women <span class="text-muted"> 50 </span></h6>
+            </div>-->
+       
+    </div>
+</div>
+      
+      
+      

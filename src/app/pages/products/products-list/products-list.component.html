@@ -1,0 +1,27 @@
+<div class="container">
+  <p class="text-muted py-4"> Home / Shop / Women / {{currentCategory}} </p>
+  <div class="row">
+    <div class="col-lg-3 ">
+      <app-filter-dialog></app-filter-dialog>
+    </div>
+
+    <div class="col-lg-9 ">
+      <div class="pb-3">
+        <h5 class="mt-3">{{currentCategory}} <small class="text-muted"> 2 items </small></h5>
+        <div class="row">
+          <div class="col-12">
+            <app-products-list-header *ngIf="!noResults" (sortChanged)="sortProducts($event)">
+            </app-products-list-header>
+          </div>
+        </div>
+        <div class="row">
+          <div *ngFor="let item of products" class="col-lg-4 col-md-6">
+            <app-product-item [product]="item"></app-product-item>
+          </div>
+        </div>
+      </div>
+      <app-product-filter></app-product-filter>
+    </div>
+  </div>
+</div>
+<app-four-part></app-four-part>

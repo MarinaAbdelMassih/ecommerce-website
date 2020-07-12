@@ -1,0 +1,14 @@
+<div class="d-flex align-items-center" [class.readonly]="readonly">
+    <span 
+    *ngFor="let star of stars; let i = index" 
+    class="material-icons" style="font-size: 15px;"
+    (mouseover)="newValue = i + 1" 
+    (mouseleave)="newValue = 0"
+    (click)="!readonly ? value = i + 1 : ''"
+    [class.filled]="value >= i + 1 || (!readonly && newValue >= i + 1)">
+        {{(value >= i + 1 || (!readonly && newValue >= i + 1)) ? 'star' : 'star_border'}}
+    </span>
+    <span *ngIf="price !== undefined" class="price ml-auto">
+        {{price}} EGP
+    </span>
+</div>

@@ -1,0 +1,111 @@
+<div class="container mb-5">
+        <div class="row">
+            <div class="col-12">
+                 <h2 class="font-weight-bold my-5">{{"cart" | translate}}</h2>
+            </div>
+
+        </div>
+        <mat-divider class="mb-5 mt-2"></mat-divider>
+        <div class="row">
+            <div class="col-lg-8">
+                <ng-container *ngFor="let item of cartManager.cartItems.value">
+                    <app-cart-item [item]="item"></app-cart-item>
+                    <mat-divider class="my-5"></mat-divider>
+                </ng-container>
+            </div>
+            <div class="offset-lg-1 col-lg-3">
+                    <h3 class="font-weight-bold mb-5">{{"Cart_totals" | translate}}</h3>
+                    <div class="d-flex justify-content-between w-75">
+                        <h4 class="font-weight-bold mb-2">{{"Subtotal" | translate}}</h4>
+                        <h4 class="font-weight-bold mb-2">$ {{cartManager.cartValues.value.total_price}} </h4>
+                    </div>
+                    <hr />
+                    <div class="d-flex justify-content-between w-100">
+                        <h4 class="font-weight-bold mb-2 mr-4">{{"Shipping" | translate}}</h4>
+                        <div>
+                            <mat-radio-group aria-label="Select an option">
+                                <mat-radio-button value="1">Flat rate:$10</mat-radio-button>
+                                <br />
+                                <mat-radio-button value="2">Local pickup</mat-radio-button>
+                            </mat-radio-group>
+                            <p class="my-3">
+                               {{" Shipping_option_will_be_updated_during_checkout | translate"}}
+                            </p>
+                            <p class="font-weight-bold">{{"Calculate_Shipping" | translate}}</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="d-flex justify-content-between w-75">
+                        <h4 class="font-weight-bold mb-2">total</h4>
+                        <h4 class="font-weight-bold mb-2"> $ {{cartManager.cartValues.value.final_total_price}} </h4>
+                    </div>
+                    <button class="my-5 px-5 py-4 w-100" (click)="router.navigateByUrl('payment')">{{"Proceed_To_Checkout" | translate}}</button>
+                    <a href="#" class="font-weight-bold my-3"  routerLink="/">{{"Continue Shopping " | translate}}</a>
+        
+                   
+                </div>
+        </div>
+       <!-- <div class="row font-weight-bold summary font-weight-bold">
+         <div class="col-12 d-flex mb-4 justify-content-between">
+                <span class="dark">{{"subTotal"}}</span>
+                <span>{{cartManager.cartValues.value.total_price}} {{"LE"}}</span>
+            </div>
+            <div *ngIf="cartManager.cartValues.value?.shipping_rate" class="col-12 d-flex mb-4 justify-content-between">
+                <span class="dark">{{"shipping"}}</span>
+                <span>{{cartManager.cartValues.value.shipping_rate}} {{"LE"}}</span>
+            </div>
+            <div *ngIf="cartManager.cartValues.value?.vat" class="col-12 d-flex mb-4 justify-content-between">
+                <span class="dark">{{"VAT"}}</span>
+                <span>{{cartManager.cartValues.value.vat}} {{"LE"}}</span>
+            </div>
+            <div *ngIf="cartManager.cartValues.value?.discount" class="col-12 d-flex mb-4 justify-content-between">
+              <span class="dark">{{"discount"}}</span>
+              <span>{{cartManager.cartValues.value.discount}} {{"LE"}}</span>
+          </div>
+            <div class="col-12 mb-4">
+                <mat-divider></mat-divider>
+            </div> 
+            <div class="col-12 d-flex mb-4 justify-content-between">
+                    <span class="text-dark">subTotal</span>
+                    <span>{{cartManager.cartValues.value.total_price}} L.E</span>
+                </div>
+           <div class="col-12 d-flex mb-5 justify-content-between">
+                <span class="text-dark">grandTotal</span>
+                <span>{{cartManager.cartValues.value.final_total_price}} L.E</span>
+            </div>
+            <div class="col-12 d-flex justify-content-between align-items-center">
+                <span routerLink="/" class="text-dark back">
+                    <img [ngStyle]="localStorage.getLang() === 'ar' ? {'transform':'rotate(180deg)'} : ''"  class="mr-2" >
+                   continue shopping
+                </span>
+                <div class="checkout">
+                    <button (click)="router.navigateByUrl('payment')" >checkout</button>
+                </div>
+            </div>
+        </div>-->
+      </div>
+
+      <app-four-part></app-four-part>
+
+<!-- start cart empty
+<ng-template #placeholder>
+        <div class="container" >
+            <div class="row my-5">
+                <div class="col-12">
+                     <h2 class="font-weight-bold">Cart</h2>
+                     <div class="emptyCart">
+                         <fa-icon [icon]="faShoppingCart" class="pt-5"></fa-icon>
+                         <h3> Your cart is currently empty.</h3>
+                     </div>
+                </div>
+               
+                <div class="col-12 text-center">
+                    <button class="py-4 px-5 my-5" routerLink="home"> back to home </button>
+                </div>
+                
+        
+            </div>
+        </div>
+        </ng-template>
+       -end cart empty-->
+        

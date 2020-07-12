@@ -1,0 +1,18 @@
+.imgbg{background-image: url("src/assets/hankasset/s1.jpg");
+    background-size: cover;}
+    .slide {
+        height: 35rem;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 0.5rem;
+    }
+    
+  
+    
+    @media (max-width: 575px) {
+        .slide {
+            height: 20rem;
+        }
+    
+    }

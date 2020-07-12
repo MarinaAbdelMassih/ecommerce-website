@@ -1,0 +1,40 @@
+<div class="row align-items-center justify-content-between mb-4">
+    <div class="col-6 col-md-4">
+        <div class="dropdown rounded">
+            <button 
+            class="btn dropdown-toggle d-flex align-items-center justify-content-between text-dark" 
+            type="button"
+            id="dropdownMenuButton" 
+            data-toggle="dropdown">
+               Filters 
+                <span class="material-icons">
+                    keyboard_arrow_down
+                </span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item">
+                  filter by price
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-md-5 offset-md-3">
+        <div class="dropdown rounded">
+            <button 
+            class="btn dropdown-toggle d-flex align-items-center justify-content-between text-dark" 
+            type="button"
+            id="dropdownMenuButton" 
+            data-toggle="dropdown">
+                {{currentValue}} 
+                <span class="material-icons">
+                    keyboard_arrow_down
+                </span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a *ngFor="let value of values" (click)="filterChanged(value)" class="dropdown-item">
+                    {{value}}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

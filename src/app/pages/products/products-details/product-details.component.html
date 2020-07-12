@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6">
+                
+
+            <app-image-viewer (click)="showDetails()" [product]="product" style="cursor: pointer;"></app-image-viewer>
+        </div>
+        <div class="col-12 col-md-6">
+            <app-item-details  [product]="product" ></app-item-details>
+        </div>
+    </div>
+
+    <section class="mb-3">
+        <app-main-info ></app-main-info>
+    </section>
+   <!-- <div class="row">
+        <div class="col-12">
+             <app-main-info></app-main-info>
+        </div>
+    </div>
+<button (click)="showDetails()" >quick view</button>-->
+    
+</div>
+<app-four-part></app-four-part>

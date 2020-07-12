@@ -1,0 +1,84 @@
+<!--<div class="container border-bottom mb-lg-0 mb-3">
+    <div class="row">
+      <nav class="navbar navbar-expand-lg bg-white px-0 py-3 w-100">
+        <div class="col-12 col-md-6 col-lg-3 mb-3 mb-md-0">
+          <a routerLink="/" class="navbar-brand">
+            <div class="d-flex ">
+                <fa-icon [icon]="faUser" class="u1 mr-3"  routerLink="home"></fa-icon>
+                <h3 class="font-weight-bold" routerLink="home">The hanger</h3>
+        </div>
+          </a>
+        </div>
+        <div class="col-12 col-md-6 mb-3 mb-md-0 col-lg-3">
+            <form role="search" class="woocommerce-product-search">
+                <label class="screen-reader-text" >Product Search </label>
+                <input #search (keyup.enter)="onSearch($event.target.value)" type="search" id="search" class="search-field" placeholder="Search products…" value="" name="s" />
+                <button  type="submit" value="Search"> <fa-icon (click)="onSearch(search.value)" id="searchIcon" [icon]="faSearch"> </fa-icon> </button>
+                <button  (click)="onSearch(search.value)" type="submit" value="Search"> <fa-icon [icon]="faSearch"> </fa-icon> </button>
+                <input type="hidden" name="post_type" value="product" />
+            </form>
+        </div>
+        <div class="col-12 col-md-12 col-lg-6  " [ngClass]="localStorage.getLang() === 'en' ? 'pl-lg-5' : 'pr-lg-5'">
+            <div class="d-flex justify-content-between">
+                <fa-icon  routerLink="profile" [icon]="faUser"></fa-icon>
+                <fa-icon routerLink="/profile/wishlist" [icon]="faHeart"></fa-icon>
+                <div (click)="goToCart()" class="cart d-flex align-items-center">
+                        <fa-icon [icon]="faShoppingCart" class="px-2"></fa-icon> 
+                        <span class="percent">{{cartManager.cartItems.value.length}}</span>
+                 </div>
+              
+            </div>
+        </div>
+      </nav>
+      </div>
+    </div>-->
+
+
+
+<div class="container">
+        <div class="row">
+            <div class="col-lg-3 mb-3">
+                <div class="d-flex ">
+                        <fa-icon [icon]="faUser" class="u1 "  routerLink="home"></fa-icon>
+                        <h3 class="font-weight-bold mx-3" routerLink="home">The hanger</h3>
+                </div>
+            </div>
+           <!-- <div class="col-lg-6 mb-3 mb-md-0 col-lg-3">
+                    <form class="form-inline position-relative">
+                      <fa-icon (click)="onSearch(search.value)" id="searchIcon" 
+                      [ngClass]="LocalStorage.getLang() === 'en' ? 'right:0' : 'left:0'"
+                      [icon]="faSearch"></fa-icon>
+                      <input #search (keyup.enter)="onSearch($event.target.value)" id="search" class="form-control w-100" 
+                      type="search" placeholder="{{'Search'|translate}}" aria-label="Search">
+                    </form>
+                  </div>-->
+           <div class="col-lg-6 mb-3">
+                   
+               <form role="search" class="woocommerce-product-search">
+                    <label class="screen-reader-text" >Product Search </label>
+                    <input #search (keyup.enter)="onSearch($event.target.value)" type="search" id="search" class="search-field" placeholder=" {{'Search' | translate}}" value="" name="s" />
+                    <button  type="submit" value="Search" [ngClass]="LocalStorage.getLang() === 'en' ? 'right:0' : 'left:0'">
+                         <fa-icon (click)="onSearch(search.value)" id="searchIcon" [icon]="faSearch">
+                              </fa-icon> </button>
+                   <!-- <button  (click)="onSearch(search.value)" type="submit" value="Search">
+                         <fa-icon [icon]="faSearch"> </fa-icon> </button>-->
+                    <input type="hidden" name="post_type" value="product" />
+                </form>
+            </div>
+            <div class="offset-1 col-lg-2 mb-3" >
+                <div class="d-flex" style="justify-content:flex-end">
+                    <fa-icon  routerLink="profile" [icon]="faUser" class="mx-2"></fa-icon>
+                    <fa-icon routerLink="/profile/wishlist" [icon]="faHeart" class="mx-2"></fa-icon>
+                    <div (click)="goToCart()" class="cart d-flex align-items-center">
+                            <fa-icon [icon]="faShoppingCart" class="px-2"></fa-icon> 
+                            <span class="percent">{{cartManager.cartItems.value.length}}</span>
+                     </div>
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+   

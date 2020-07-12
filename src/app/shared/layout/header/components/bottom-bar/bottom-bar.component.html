@@ -1,0 +1,501 @@
+<div class="container pt-3">
+        <div class="row">
+            
+   <nav class="navbar navbar-expand-lg navbar-light ">
+       
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav "  >
+                <div class="dropdown show"  >
+                        <a class="colordrop btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         <fa-icon [icon]="faAlignLeft" class="mx-2"></fa-icon> {{'Browse_categories'|translate}}
+                        </a>
+                      
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" >
+                                <div *ngFor="let category of categories; let i = index">
+                         <!--<a class="dropdown-item mb-2 alink" [state]="{category: category}"  routerLink="products/{{category.slug}}" 
+                           > {{category.name}}  </a>-->
+                           <div 
+                         class="menu position-absolute"
+                       >
+                       <li class="dropdown-submenu">
+                            <a class="dropdown-item mb-2 alink dropdown-toggle"  
+                            [state]="{category: category}"  routerLink="products/{{category.slug}}" 
+                            > {{category.name}}  </a>
+                        <ul class="dropdown-menu">
+                          
+                              <app-categories-menu
+                            [categories]="category.subCategories">
+                        
+                        </app-categories-menu>
+                       
+                    
+                         
+                        </ul>
+                      </li>
+                            
+                        </div>
+                           <hr class="py-3">
+                         
+                        </div>
+                         
+                        
+                       
+                        </div>
+                      </div>
+           
+            <div class=" px-4 disp">
+                    <div class="more dropdown">
+                      
+                                    
+                        <button class=" btn btn-white dropdown-toggle font-weight-bold" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           {{ 'pages' | translate}}
+                        </button>
+                    
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2" style="width:26rem;">
+                            <ul class="list-unstyled" >
+                                   
+                                <li class="text-muted"> <a href="#" class="alink"> Home - Classic eCommerance</a> </li>
+                                <li class="text-muted"> <a href="#" class="alink"> Home - Classic eCommerance</a> </li>
+                                <li class="text-muted"> <a href="#" class="alink"> Home - Classic eCommerance</a> </li>
+                                <li class="text-muted"> <a href="#" class="alink"> Home - Classic eCommerance</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <div class="more dropdown">
+                            
+                        <button class=" btn btn-white dropdown-toggle font-weight-bold" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ 'the_shop' | translate}}
+                        </button>
+                    
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2" style="width:40rem;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <h6 class="mb-3 font-weight-bold">Women <span class="text-muted"> 48 </span></h6>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="text-muted">Coats <span class="text-muted"> 4 </span></li>
+                                            <li class="text-muted">Dress <span class="text-muted"> 8 </span></li>
+                                            <li class="text-muted">jumper</li>
+                                            <li class="text-muted">lounger</li>
+                                            <li class="text-muted">Ripped</li>
+                                        </ul>
+                                        <h6 class="mb-3 font-weight-bold">Women <span class="text-muted"> 48 </span></h6>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="text-muted">Coats <span class="text-muted"> 4 </span></li>
+                                            <li class="text-muted">Dress <span class="text-muted"> 8 </span></li>
+                                            <li class="text-muted">jumper</li>
+                                            <li class="text-muted">lounger</li>
+                                            <li class="text-muted">Ripped</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-3">
+                                        <h6 class="mb-3 font-weight-bold">Women <span class="text-muted"> 48 </span></h6>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="text-muted">Coats <span class="text-muted"> 4 </span></li>
+                                            <li class="text-muted">Dress <span class="text-muted"> 8 </span></li>
+                                            <li class="text-muted">jumper</li>
+                                            <li class="text-muted">lounger</li>
+                                            <li class="text-muted">Ripped</li>
+                                        </ul>
+                                        <h6 class="mb-3 font-weight-bold">Women <span class="text-muted"> 48 </span></h6>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="text-muted">Coats <span class="text-muted"> 4 </span></li>
+                                            <li class="text-muted">Dress <span class="text-muted"> 8 </span></li>
+                                            <li class="text-muted">jumper</li>
+                                            <li class="text-muted">lounger</li>
+                                            <li class="text-muted">Ripped</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-3">
+                                        <h6 class="mb-3 font-weight-bold">Women <span class="text-muted"> 48 </span></h6>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="text-muted">Coats <span class="text-muted"> 4 </span></li>
+                                            <li class="text-muted">Dress <span class="text-muted"> 8 </span></li>
+                                            <li class="text-muted">jumper</li>
+                                            <li class="text-muted">lounger</li>
+                                            <li class="text-muted">Ripped</li>
+                                        </ul>
+                                        <h6 class="mb-3 font-weight-bold">Women <span class="text-muted"> 48 </span></h6>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="text-muted">Coats <span class="text-muted"> 4 </span></li>
+                                            <li class="text-muted">Dress <span class="text-muted"> 8 </span></li>
+                                            <li class="text-muted">jumper</li>
+                                            <li class="text-muted">lounger</li>
+                                            <li class="text-muted">Ripped</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-3">
+                                        <img src="assets/hankasset/one.jpg" class="w-100" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               
+                    <div class="more dropdown">
+                        <button class="btn btn-white dropdown-toggle font-weight-bold" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ 'thumbs' | translate}}
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2" style="width:40rem;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="assets/hankasset/one.jpg" class="w-100" />
+                                        <p class="text-muted py-2">
+                                            lorem ipsum
+                                        </p>
+                                    </div>
+                                    <div class="col-3">
+                                        <img src="assets/hankasset/two.jpg" class="w-100" />
+                                        <p class="text-muted py-2">
+                                            lorem ipsum
+                                        </p>
+                                    </div>
+                                    <div class="col-3">
+                                        <img src="assets/hankasset/three.jpg" class="w-100" />
+                                        <p class="text-muted py-2">
+                                            lorem ipsum
+                                        </p>
+                                    </div>
+                                    <div class="col-3">
+                                        <img src="assets/hankasset/one.jpg" class="w-100" />
+                                        <p class="text-muted py-2">
+                                            lorem ipsum
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 
+                    <div class="more dropdown">
+                        <button class="btn btn-white dropdown-toggle font-weight-bold" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ 'icons' | translate}}
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2" style="width:40rem;">
+                          <div class="container">
+                              <div class="row">
+                                  <div class="col-3">
+                                      <fa-icon [icon]="faChalkboard" class="icon"></fa-icon>
+                                  </div>
+                                  <div class="col-3">
+                                    <fa-icon [icon]="faCreditCard" class="icon"></fa-icon>
+                                </div>
+                                <div class="col-3">
+                                    <fa-icon [icon]="faChalkboard" class="icon"></fa-icon>
+                                </div>
+                                <div class="col-3">
+                                    <fa-icon [icon]="faCreditCard" class="icon"></fa-icon>
+                                </div>
+                              </div>
+
+                          </div>
+                        </div>
+                    </div>
+                  
+                    <div class="more dropdown">
+                        <button class="btn btn-white dropdown-toggle font-weight-bold" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ 'the_blog' | translate}}
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2" style="width:40rem;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="assets/hankasset/one.jpg" class="w-100" />
+                                        <p class="text-muted py-2">
+                                            lorem ipsum
+                                        </p>
+                                    </div>
+                                    <div class="col-3">
+                                        <img src="assets/hankasset/two.jpg" class="w-100" />
+                                        <p class="text-muted py-2">
+                                            lorem ipsum
+                                        </p>
+                                    </div>
+                                    <div class="col-3">
+                                        <img src="assets/hankasset/three.jpg" class="w-100" />
+                                        <p class="text-muted py-2">
+                                            lorem ipsum
+                                        </p>
+                                    </div>
+                                    <div class="col-3">
+                                        <img src="assets/hankasset/one.jpg" class="w-100" />
+                                        <p class="text-muted py-2">
+                                            lorem ipsum
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="more dropdown">
+                        <button class="btn btn-white dropdown-toggle font-weight-bold" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ 'contact' | translate}}
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2" style="width:30rem;">
+                            <div class="container">
+                                <div class="row">
+                                   
+                                    <div class="col-6">
+                                    <p class="text-muted pb-2"> call us +01152874566</p>
+                                    <p class="text-muted pb-2"> monday - friday</p>
+                                    <p class="text-muted pb-2"> support@yourstore.com</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="text-muted ">17 alnahda st </p>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+           
+          </ul>
+          <div class="disp1 pl-4 ">
+               <div> <a href="#" class="last text-muted  mx-4"> {{ 'pre_sale' | translate}} </a> </div> 
+               <div>  <a href="#" class="last text-muted  "> {{ 'buy_now' | translate}}</a> </div>
+            </div>
+        </div>
+      </nav>
+
+
+
+             
+           <!-- <div class="col-lg-3">
+                   
+                    <div class="dropdown show" >
+                            <a class="colordrop btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             <fa-icon [icon]="faAlignLeft" class="mr-2"></fa-icon> Browse Categories
+                            </a>
+                          
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" >
+                                    <div *ngFor="let category of categories; ">
+                              <a class="dropdown-item mb-2 alink"  routerLink="/products/{{category.slug}}" 
+                               > {{category.name}}  </a>
+                               <hr>
+                              
+                            </div>
+                           
+                            </div>
+                          </div>
+              </div>
+            <div class="col-lg-7">
+                <div class="d-flex justify-content-around">
+                    <div class="more dropdown">
+                        <button class="btn btn-white dropdown-toggle font-weight-bold" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Pages
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2" style="width:26rem;">
+                            <ul class="list-unstyled" >
+                                   
+                                <li class="text-muted"> <a href="#" class="alink"> Home - Classic eCommerance</a> </li>
+                                <li class="text-muted"> <a href="#" class="alink"> Home - Classic eCommerance</a> </li>
+                                <li class="text-muted"> <a href="#" class="alink"> Home - Classic eCommerance</a> </li>
+                                <li class="text-muted"> <a href="#" class="alink"> Home - Classic eCommerance</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="more dropdown">
+                        <button class="btn btn-white dropdown-toggle font-weight-bold" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            The Shop
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2" style="width:40rem;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <h6 class="mb-3 font-weight-bold">Women <span class="text-muted"> 48 </span></h6>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="text-muted">Coats <span class="text-muted"> 4 </span></li>
+                                            <li class="text-muted">Dress <span class="text-muted"> 8 </span></li>
+                                            <li class="text-muted">jumper</li>
+                                            <li class="text-muted">lounger</li>
+                                            <li class="text-muted">Ripped</li>
+                                        </ul>
+                                        <h6 class="mb-3 font-weight-bold">Women <span class="text-muted"> 48 </span></h6>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="text-muted">Coats <span class="text-muted"> 4 </span></li>
+                                            <li class="text-muted">Dress <span class="text-muted"> 8 </span></li>
+                                            <li class="text-muted">jumper</li>
+                                            <li class="text-muted">lounger</li>
+                                            <li class="text-muted">Ripped</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-3">
+                                        <h6 class="mb-3 font-weight-bold">Women <span class="text-muted"> 48 </span></h6>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="text-muted">Coats <span class="text-muted"> 4 </span></li>
+                                            <li class="text-muted">Dress <span class="text-muted"> 8 </span></li>
+                                            <li class="text-muted">jumper</li>
+                                            <li class="text-muted">lounger</li>
+                                            <li class="text-muted">Ripped</li>
+                                        </ul>
+                                        <h6 class="mb-3 font-weight-bold">Women <span class="text-muted"> 48 </span></h6>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="text-muted">Coats <span class="text-muted"> 4 </span></li>
+                                            <li class="text-muted">Dress <span class="text-muted"> 8 </span></li>
+                                            <li class="text-muted">jumper</li>
+                                            <li class="text-muted">lounger</li>
+                                            <li class="text-muted">Ripped</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-3">
+                                        <h6 class="mb-3 font-weight-bold">Women <span class="text-muted"> 48 </span></h6>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="text-muted">Coats <span class="text-muted"> 4 </span></li>
+                                            <li class="text-muted">Dress <span class="text-muted"> 8 </span></li>
+                                            <li class="text-muted">jumper</li>
+                                            <li class="text-muted">lounger</li>
+                                            <li class="text-muted">Ripped</li>
+                                        </ul>
+                                        <h6 class="mb-3 font-weight-bold">Women <span class="text-muted"> 48 </span></h6>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="text-muted">Coats <span class="text-muted"> 4 </span></li>
+                                            <li class="text-muted">Dress <span class="text-muted"> 8 </span></li>
+                                            <li class="text-muted">jumper</li>
+                                            <li class="text-muted">lounger</li>
+                                            <li class="text-muted">Ripped</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-3">
+                                        <img src="assets/hankasset/one.jpg" class="w-100" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more dropdown">
+                        <button class="btn btn-white dropdown-toggle font-weight-bold" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Thumbs
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2" style="width:40rem;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="assets/hankasset/one.jpg" class="w-100" />
+                                        <p class="text-muted py-2">
+                                            lorem ipsum
+                                        </p>
+                                    </div>
+                                    <div class="col-3">
+                                        <img src="assets/hankasset/two.jpg" class="w-100" />
+                                        <p class="text-muted py-2">
+                                            lorem ipsum
+                                        </p>
+                                    </div>
+                                    <div class="col-3">
+                                        <img src="assets/hankasset/three.jpg" class="w-100" />
+                                        <p class="text-muted py-2">
+                                            lorem ipsum
+                                        </p>
+                                    </div>
+                                    <div class="col-3">
+                                        <img src="assets/hankasset/one.jpg" class="w-100" />
+                                        <p class="text-muted py-2">
+                                            lorem ipsum
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 
+                  
+                    <div class="more dropdown">
+                        <button class="btn btn-white dropdown-toggle font-weight-bold" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Icons
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2" style="width:40rem;">
+                          <div class="container">
+                              <div class="row">
+                                  <div class="col-3">
+                                      <fa-icon [icon]="faChalkboard" class="icon"></fa-icon>
+                                  </div>
+                                  <div class="col-3">
+                                    <fa-icon [icon]="faCreditCard" class="icon"></fa-icon>
+                                </div>
+                                <div class="col-3">
+                                    <fa-icon [icon]="faChalkboard" class="icon"></fa-icon>
+                                </div>
+                                <div class="col-3">
+                                    <fa-icon [icon]="faCreditCard" class="icon"></fa-icon>
+                                </div>
+                              </div>
+
+                          </div>
+                        </div>
+                    </div>
+                  
+                    <div class="more dropdown">
+                        <button class="btn btn-white dropdown-toggle font-weight-bold" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            The Blog
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2" style="width:40rem;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="assets/hankasset/one.jpg" class="w-100" />
+                                        <p class="text-muted py-2">
+                                            lorem ipsum
+                                        </p>
+                                    </div>
+                                    <div class="col-3">
+                                        <img src="assets/hankasset/two.jpg" class="w-100" />
+                                        <p class="text-muted py-2">
+                                            lorem ipsum
+                                        </p>
+                                    </div>
+                                    <div class="col-3">
+                                        <img src="assets/hankasset/three.jpg" class="w-100" />
+                                        <p class="text-muted py-2">
+                                            lorem ipsum
+                                        </p>
+                                    </div>
+                                    <div class="col-3">
+                                        <img src="assets/hankasset/one.jpg" class="w-100" />
+                                        <p class="text-muted py-2">
+                                            lorem ipsum
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="more dropdown">
+                        <button class="btn btn-white dropdown-toggle font-weight-bold" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Contact
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2" style="width:30rem;">
+                            <div class="container">
+                                <div class="row">
+                                   
+                                    <div class="col-6">
+                                    <p class="text-muted pb-2"> call us +01152874566</p>
+                                    <p class="text-muted pb-2"> monday - friday</p>
+                                    <p class="text-muted pb-2"> support@yourstore.com</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="text-muted ">17 alnahda st </p>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                  </div>
+            </div>
+            <div class="col-lg-2 mt-3">
+                <div class="d-flex ">
+                    <a href="#" class="last text-muted  mr-4"> Pre-Sale</a>
+                    <a href="#" class="last text-muted  ">Buy Now</a>
+                </div>
+            </div>
+        -->
+        </div>
+    </div>

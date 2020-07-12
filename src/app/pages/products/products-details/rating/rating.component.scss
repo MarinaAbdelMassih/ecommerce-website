@@ -1,0 +1,20 @@
+.material-icons {
+    cursor: pointer;
+    letter-spacing: -1px;
+    font-size: 1.8rem;
+
+    &.filled {
+        color: var(--red);
+    }
+}
+
+span.price {
+    font-family: Jhenghei-Bold;
+    font-size: 1.25rem;
+}
+
+.readonly {
+    .material-icons {
+        cursor: default;
+    }
+}

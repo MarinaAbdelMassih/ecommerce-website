@@ -1,0 +1,105 @@
+<div class="container">
+   
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="cart-item d-flex justify-content-between align-items-center mb-5">
+                <div class="text-center d-flex justify-content-center">
+                    <span (click)="deleteItem(item)" class="material-icons text-right mr-3">
+                        close
+                    </span>
+                </div>
+                <div class="image-wrapper border rounded d-flex justify-content-center align-items-center">
+                    <img [src]="item.images[0]" />
+                </div>
+                <div class="pl-4 pl-md-5" [ngClass]="localStorage.getLang() === 'en' ? 'pl-4 pl-md-5' : 'pr-4 pr-md-5'">
+                    <h5 class="mb-3 font-weight-bold ">
+                        {{item.name}}
+                    </h5>
+                </div>
+                <div class="pl-4 pl-md-5">
+                    <p class="mb-3 font-weight-bold ">
+                        {{item.standard_rate}} {{"LE"|translate}}
+                </p>
+                </div>
+                <div class="pl-4 pl-md-5">
+                    <p class="mb-3 font-weight-bold ">
+                        <input type="number" id="quantity" name="quantity" min="1" max="58" [value]="item.qty">
+                </p>
+                </div>
+               
+                <div class="pl-4 pl-md-5">
+                    <p class="mb-2 font-weight-bold ">
+                        {{item.standard_rate * item.qty}} {{"LE"|translate}}
+                </p>
+                </div>
+            </div>
+          <hr>
+          <div class="d-flex justify-content-between pt-1">
+            <div class="d-flex ">
+                <p class="text-muted mr-3">{{"Cpupon_code"|translate}}</p>
+                <p class="font-weight-bold" (click)="promocode()" style="cursor: pointer;">{{"Apply_Coupon"|translate}}</p>
+            </div>
+            
+            <!--<p class="text-muted">Update Cart</p>-->
+          </div>
+        </div>
+
+        <!--<div class="offset-lg-1 col-lg-3">
+            <h3 class="font-weight-bold mb-5">Cart totals</h3>
+            <div class="d-flex justify-content-between w-75">
+                <h4 class="font-weight-bold mb-2">Subtotal</h4>
+                <h4 class="font-weight-bold mb-2">$ {{cartManager.cartValues.value.total_price}} </h4>
+            </div>
+            <hr />
+            <div class="d-flex justify-content-between w-100">
+                <h4 class="font-weight-bold mb-2 mr-4">Shipping</h4>
+                <div>
+                    <mat-radio-group aria-label="Select an option">
+                        <mat-radio-button value="1">Flat rate:$10</mat-radio-button>
+                        <br />
+                        <mat-radio-button value="2">Local pickup</mat-radio-button>
+                    </mat-radio-group>
+                    <p class="my-3">
+                        Shipping option will be <br />
+                        updated during checkout
+                    </p>
+                    <p class="font-weight-bold">Calculate Shipping</p>
+                </div>
+            </div>
+            <hr />
+            <div class="d-flex justify-content-between w-75">
+                <h4 class="font-weight-bold mb-2">total</h4>
+                <h4 class="font-weight-bold mb-2"> $ {{cartManager.cartValues.value.final_total_price}} </h4>
+            </div>
+            <button class="my-5 px-5 py-4 w-100" (click)="router.navigateByUrl('payment')">Proceed To Checkout</button>
+            <a href="#" class="font-weight-bold my-3"  routerLink="/">Continue Shopping</a>
+
+           
+        </div> -->
+    </div>
+</div>
+
+
+
+<!-- start cart empty-->
+<ng-template #placeholder>
+        <div  >
+            <div class="row my-5">
+                <div class="col-12">
+                     <h2 class="font-weight-bold">{{"cart" | translate}}</h2>
+                     <div class="emptyCart">
+                         <fa-icon [icon]="faShoppingCart" class="pt-5"></fa-icon>
+                         <h3> {{"Your_cart_is_currently_empty" | translate}}.</h3>
+                     </div>
+                </div>
+               
+                <div class="col-12 text-center">
+                    <button class="py-4 px-5 my-5" routerLink="home"> {{"back_to_home" | translate}} </button>
+                </div>
+                
+        
+            </div>
+        </div>
+        </ng-template>
+        <!--end cart empty-->
+        

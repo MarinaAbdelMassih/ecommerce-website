@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+                <div class="w-100" *ngFor="let image of product?.images; ">
+                        <img id="mainnimg1" src="assets\hankasset/r2.jpg" class="w-100">
+                        <img id="itemimg1" src="assets\hankasset/r1.jpg" class="item1 w-25 float-left p-3">
+                        <img  id="itemimg1" src="assets\hankasset/c1.jpg" class="item1 w-25 float-left p-3">
+            
+                        <img  id="itemimg1" src="assets\hankasset/c2.jpg" class="item1 w-25 float-left p-3">
+                        <img  id="itemimg1" src="assets\hankasset/one.jpg" class="item1 w-25 float-left p-3">
+            
+                    </div>
+        </div>
+        <div class="col-lg-6">
+            <h2 class="pt-4 font-weight-bold">Push-up Trousers</h2>
+            <app-rating></app-rating>
+            <h2 class="pt-4 font-weight-bold"> <span class="mr-2 line">$290</span> $222</h2>
+            <p class="text-muted my-4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aspernatur quod aliquam facere, fugiat labore unde dolorem! 
+                    Nostrum, itaque amet? Asperiores, velit. Quis, debitis cumque cupiditate amet ab perspiciatis laudantium?
+                </p>
+                <p class="text-muted">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aspernatur quod aliquam facere, fugiat labore unde dolorem! 
+                   laudantium? <span class="text-dark font-weight-bold">bershka.com.</span>
+                </p>
+                <h5 class="pt-2 font-weight-bold">
+                    <fa-icon [icon]="faArrowRight"></fa-icon>
+                    Go to product page</h5>
+                    <button class="w-100 btn btn-dark text-light my-3"> {{"add_to_cart" | translate}} </button>
+                    <div class="d-flex justify-content-between">
+        
+                        <div class="d-flex">
+                            <fa-icon [icon]="faHeart" class="mr-2"></fa-icon>
+                            <h6 class="font-weight-bold">{{"add_to_wishlist"| translate}}</h6>
+                        </div>
+                        <div class="d-flex">
+                            <h6 class="mr-3 font-weight-bold"> {{"Share" | translate}} </h6>
+                            <fa-icon [icon]="faFacebook" class="mr-3"></fa-icon>
+                            <fa-icon [icon]="faTwitter" class="mr-3"></fa-icon>
+                            <fa-icon [icon]="faInstagram" class="mr-3"></fa-icon>
+                        </div>
+                    </div>   
+                    <div class="d-flex mt-5">
+                            <p class="text-muted mr-1" > {{"Categories :" | translate}}</p>
+                           <a href="" class="mr-2 text-muted">{{"Men" | translate}}</a>
+                           <a href="" class="mr-2 text-muted">{{ "Junior" | translate}}</a>
+                            <br>
+                           <a href="" class="mr-2 text-muted">{{"Women" | translate}}</a>
+        
+                        </div>     
+            
+
+            </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<app-slider [slider]="slider"></app-slider>
+<section *ngFor="let collection of collections" class="mb-3">
+     <app-product-cart [title]="collection.name" [collection]="collection"></app-product-cart>
+ </section>
+<!--<app-product></app-product>-->
+<app-men-women></app-men-women>
+
+<!--*ngFor="let collection of collections | slice:0:3 <app-new-arrival *ngFor="let collection of collections" [collection]="collection"></app-new-arrival>-->
+<app-sales></app-sales>
+<app-four-part></app-four-part>

@@ -1,0 +1,127 @@
+<div class="container"  >
+    <div class="row">
+        <div class="col-lg-5" >
+            <div class=" d-flex">
+                <fa-icon [icon]="faFacebook " class="mt-3 mr-3"></fa-icon>
+                <fa-icon [icon]="faTwitter " class="mt-3 mr-3"></fa-icon>
+                <p class="text-muted mx-2" >{{"Call" | translate}} +40 123 456 789</p>
+            </div>
+        </div>
+        <div class="col-lg-5">
+            <p class=" text-muted" style="text-align: initial;">
+                {{'Free_shipping_on_all_orders_over_$75' |translate}}
+            </p>
+        </div>
+        <div class="col-lg-2">
+            <div class=" d-flex justify-content-between">
+                <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           &US
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <button class="dropdown-item" type="button">Arabic</button>
+                        </div>
+                 </div>
+                 <div class="dropdown">
+                    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{localStorage.getLang() === 'en' ? 'English' : 'عربي'}}
+
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button" (click)="language('en')">English</button>
+                        <button class="dropdown-item" type="button" (click)="language('ar')">عربي</button>
+                        </div>
+                 
+                   
+             </div>
+            </div>        
+        </div>
+    </div>
+</div>
+<hr>
+
+<!--
+<div class="container">
+    <div class="row">
+        <div class="col-12 pt-2">
+            <div class="d-flex justify-content-between">
+                <div class="d-flex">
+                    <fa-icon [icon]="faFacebook " class="mt-3 mr-3"></fa-icon>
+                    <fa-icon [icon]="faTwitter " class="mt-3 mr-3"></fa-icon>
+                    <p class="text-muted">Call +40 123 456 789</p>
+                </div>
+                <div>
+                    <p class="text-muted">
+                        Free shipping on all orders over $75
+                    </p>
+                </div>
+                <div class="d-flex">
+                        <div class="dropdown">
+                                <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   &US
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <button class="dropdown-item" type="button">Arabic</button>
+                                </div>
+                            </div>
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            English
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <button class="dropdown-item" type="button">Arabic</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr />
+-->
+
+<!--
+
+<div class="container">
+        <div class="row">
+                <div class="col-lg-3 pt-2">
+                        <div class="d-flex justify-content-between">
+                            
+                                 <fa-icon [icon]="faFacebook "></fa-icon>
+                                <fa-icon [icon]="faTwitter "></fa-icon>
+                                <p class="text-muted">Call +40 123 456 789</p>
+                        </div>        
+                  </div>
+                  <div class="offset-1 col-lg-4">
+                        <p class="text-muted">
+                            Free shipping on all orders over $75
+                        </p>
+                    </div>
+                    
+                <div class="offset-lg-1 col-lg-3 d-flex">
+                        <div class="dropdown">
+                            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               $US
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <button class="dropdown-item" type="button">Arabic</button>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                                <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    English
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <button class="dropdown-item" type="button">Arabic</button>
+                                </div>
+                            </div>
+                    </div>
+        </div>
+    </div>-->
+  
+
+
+   
+               
+           
+        

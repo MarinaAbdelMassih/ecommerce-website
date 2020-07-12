@@ -1,0 +1,17 @@
+<div class="container my-5">
+  <div class="text-center">
+    <h2 class="font-weight-bold">{{collection?.name}}</h2>
+    <!-- <p class="text-muted mb-5">Add our new arrivals to your weekly lineup</p>  [routerLink]='["/product", i]' -->
+  </div>
+  <div class="row">
+    <div *ngFor="let item of collection?.items | slice:0:3 ; let index = i;" class="col-lg-4 col-md-6 pr-0">
+      <div class="card" routerLink="/product/{{collection.id}}">
+        <span> new </span>
+      </div>
+      <div >
+      <p class="text-muted mt-2">{{item.name}} <br>$ {{item.id}}  </p>
+     <!-- <fa-icon class="ml-auto" (click)="toggleFavorite()" [icon]="faHeart" ></fa-icon>-->
+      </div>
+    </div>
+  </div>
+</div>

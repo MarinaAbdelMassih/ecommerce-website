@@ -1,0 +1,19 @@
+<div class="container">
+    <h2 class="my-5 font-weight-bold">{{"checkout"|translate}}</h2>
+    <div class="text-center m-auto py-5">
+        <h6>{{"Returning_customer?" | translate}} <a  class="colorLink" routerLink="/login"> {{"click_here_to_login" | translate}}</a></h6>
+        <h6>{{"Have_a_coupon?" | translate}} <a (click)="promocode()"  class="colorLink" style="cursor:pointer;">{{"click_here_to_enter_your_code" | translate}} </a></h6>
+       
+    </div>
+    <div class="row">
+     <div class="col-12">
+        <app-confirmation></app-confirmation>
+     </div>
+     <!--<div class="col-lg-6">
+
+         <app-payment ></app-payment>
+   </div>-->
+   
+    </div>
+</div>
+<app-four-part></app-four-part>

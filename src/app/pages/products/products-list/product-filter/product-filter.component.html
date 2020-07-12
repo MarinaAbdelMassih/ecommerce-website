@@ -1,0 +1,79 @@
+<!--first filter-->
+<!--<div class="container">
+    <div class="row">
+        <div class="col-xl-3 col-lg-4 col-md-6 pr-0">
+          <div class="card w-100"  >
+             
+          </div>
+          <p class="text-muted mt-2">Black Sneakers <br> $139 </p>
+         
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 pr-0">
+            <div class="card w-100" >
+               
+            </div>
+            <p class="text-muted mt-2">Black Sneakers <br> $139 </p>
+           
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 pr-0">
+              <div class="card w-100" >
+                 
+              </div>
+              <p class="text-muted mt-2">Black Sneakers <br> $139 </p>
+             
+            </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 pr-0">
+              <div class="card w-100" >
+               
+              </div>
+              <p class="text-muted mt-2">Black Sneakers <br> $139 </p>
+            
+            </div>
+      </div>
+</div>-->
+<!--end first -->
+
+<!--start ui second filter -->
+<div class="container">
+    <div class="row" >
+        <div class="col-lg-5 col-md-6"  *ngFor="let category of categories;">
+            <div>     
+            <div class=" w-100">
+                    <img [src]="category.images" alt="">
+            </div>        
+        </div>
+        <div class="col-lg-2 col-md-3 m-auto" >
+                <p class="pt-2"> {{category.name}}  </p>
+        </div>
+        <div class="col-lg-5 col-md-3 m-auto">
+            <div class="d-flex float-right">
+              <p class="pt-2 mr-2"> {{category.price}}  </p>
+              <fa-icon [icon]="faHeart" class="mr-2"></fa-icon>
+              <fa-icon [icon]="faEye"class="mr-2"></fa-icon>
+              <fa-icon [icon]="faShoppingCart" class="mr-2"></fa-icon>
+            </div>
+        </div>
+       
+    </div>
+    <hr>
+    <!--<div class="row">
+            <div class="col-lg-5 col-md-6">
+                <div class="card w-100"></div>        
+            </div>
+            <div class="col-lg-2 col-md-3  m-auto">
+                    <p class="pt-2"> Black Sneakers </p>
+            </div>
+            <div class=" col-lg-5 col-md-3 m-auto">
+                <div class="d-flex float-right">
+                  <p class="pt-2 mr-2"> $139 </p>
+                  <fa-icon [icon]="faHeart" class="mr-2"></fa-icon>
+                  <fa-icon [icon]="faEye" class="mr-2"></fa-icon>
+                  <fa-icon [icon]="faShoppingCart" class="mr-2"></fa-icon>
+                </div>
+            </div>
+           
+        </div>-->
+</div>
+
+
+<!--end ui second filter -->
